@@ -5,7 +5,7 @@ This is the .keylayout file for the `DELL KB216 Belgian (French)` keyboard, pict
 It was made using [Ukulele](https://software.sil.org/ukelele/) with the help of [this document](https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/18f3997a-d0c7-4302-87c1-8f687972ac57/content).
 
 To use this keyboard on Mac:
-- Download the .keylayout file.
+- Download the `.keylayout` file.
 - Save it under `/Library/Keyboard Layouts/`.
 - Navigate to `Apple > System Settings... > Keyboard > Text Input > Input Sources > Edit...`.
 - Click `+` in the bottom left corner.
