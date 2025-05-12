@@ -1,5 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
+<!--Last edited by Ukelele version 426 on 2025-05-12 at 15:01 (CEST)-->
 <keyboard group="126" id="-4873" name="DELL-KB216-BEFR" maxout="1">
     <layouts>
         <layout first="0" last="17" mapSet="ANSI" modifiers="Modifiers"/>
@@ -153,11 +154,11 @@
             <key code="9" output="V"/>
             <key code="10" output=""/>
             <key code="11" output="B"/>
-            <key code="12" output="A"/>
+            <key code="12" action="A"/>
             <key code="13" output="Z"/>
-            <key code="14" output="E"/>
+            <key code="14" action="E"/>
             <key code="15" output="R"/>
-            <key code="16" output="Y"/>
+            <key code="16" action="Y"/>
             <key code="17" output="T"/>
             <key code="18" output="1"/>
             <key code="19" output="2"/>
@@ -172,10 +173,10 @@
             <key code="28" output="8"/>
             <key code="29" output="0"/>
             <key code="30" output="*"/>
-            <key code="31" output="O"/>
-            <key code="32" output="U"/>
+            <key code="31" action="O"/>
+            <key code="32" action="U"/>
             <key code="33" action="¨"/>
-            <key code="34" output="I"/>
+            <key code="34" action="I"/>
             <key code="35" output="P"/>
             <key code="36" output="&#x000D;"/>
             <key code="37" output="L"/>
@@ -367,7 +368,7 @@
             <key code="11" output="b"/>
             <key code="12" output="a"/>
             <key code="13" output="z"/>
-            <key code="14" output="e"/>
+            <key code="14" output="€"/>
             <key code="15" output="r"/>
             <key code="16" output="y"/>
             <key code="17" output="t"/>
@@ -692,9 +693,48 @@
             <when state="none" output="$"/>
             <when state="Dead Key State Circumflex Accent" output="$"/>
         </action>
+        <action id="A">
+            <when state="none" output="A"/>
+            <when state="Dead Key State Acute Accent" output="Á"/>
+            <when state="Dead Key State Circumflex Accent" output="Â"/>
+            <when state="Dead Key State Dots Accent" output="Ä"/>
+            <when state="Dead Key State Grave Accent" output="À"/>
+        </action>
         <action id="Dead Key State Circumflex Accent">
             <when state="none" next="Dead Key State Circumflex Accent"/>
             <when state="Dead Key State Circumflex Accent" next="1"/>
+        </action>
+        <action id="E">
+            <when state="none" output="E"/>
+            <when state="Dead Key State Acute Accent" output="É"/>
+            <when state="Dead Key State Circumflex Accent" output="Ê"/>
+            <when state="Dead Key State Dots Accent" output="Ë"/>
+            <when state="Dead Key State Grave Accent" output="È"/>
+        </action>
+        <action id="I">
+            <when state="none" output="I"/>
+            <when state="Dead Key State Acute Accent" output="Í"/>
+            <when state="Dead Key State Circumflex Accent" output="Î"/>
+            <when state="Dead Key State Dots Accent" output="Ï"/>
+            <when state="Dead Key State Grave Accent" output="Ì"/>
+        </action>
+        <action id="O">
+            <when state="none" output="O"/>
+            <when state="Dead Key State Acute Accent" output="Ó"/>
+            <when state="Dead Key State Circumflex Accent" output="Ô"/>
+            <when state="Dead Key State Dots Accent" output="Ö"/>
+            <when state="Dead Key State Grave Accent" output="Ò"/>
+        </action>
+        <action id="U">
+            <when state="none" output="U"/>
+            <when state="Dead Key State Acute Accent" output="Ú"/>
+            <when state="Dead Key State Circumflex Accent" output="Û"/>
+            <when state="Dead Key State Dots Accent" output="Ü"/>
+            <when state="Dead Key State Grave Accent" output="Ù"/>
+        </action>
+        <action id="Y">
+            <when state="none" output="Y"/>
+            <when state="Dead Key State Acute Accent" output="Ý"/>
         </action>
         <action id="^">
             <when state="none" next="Dead Key State Circumflex Accent"/>
@@ -702,6 +742,10 @@
         </action>
         <action id="^ 1">
             <when state="none" next="Dead Key State Circumflex Accent"/>
+        </action>
+        <action id="`">
+            <when state="none" next="Dead Key State Grave Accent"/>
+            <when state="Dead Key State Acute Accent" next="Dead Key State Grave Accent"/>
         </action>
         <action id="a">
             <when state="none" output="a"/>
@@ -740,23 +784,21 @@
         </action>
         <action id="y">
             <when state="none" output="y"/>
+            <when state="Dead Key State Acute Accent" output="ý"/>
             <when state="Dead Key State Circumflex Accent" output="ŷ"/>
             <when state="Dead Key State Dots Accent" output="ÿ"/>
         </action>
         <action id="¨">
-            <when state="none" output="¨"/>
+            <when state="none" next="Dead Key State Dots Accent"/>
             <when state="Dead Key State Grave Accent" next="Dead Key State Dots Accent"/>
         </action>
         <action id="´">
             <when state="none" next="Dead Key State Acute Accent"/>
             <when state="Dead Key State Grave Accent" output="´"/>
         </action>
-        <action id="`">
-            <when state="none" next="Dead Key State Grave Accent"/>
-            <when state="Dead Key State Acute Accent" next="Dead Key State Grave Accent"/>
-        </action>
     </actions>
     <terminators>
+        <when state="1" output="^"/>
         <when state="Dead Key State Acute Accent" output="´"/>
         <when state="Dead Key State Circumflex Accent" output="^"/>
         <when state="Dead Key State Dots Accent" output="¨"/>
