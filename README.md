@@ -15,5 +15,6 @@ To use this keyboard on Mac:
 - Switch on `Show Input menu in menu bar` to add a shortcut to the top menu bar to toggle between this and the laptop's kayboard layout.
 - Click `Done`
 - Switch to the new layout from the menu bar.
+- Log out and back in to enable the changes.
 
 ![image](https://github.com/user-attachments/assets/fe4137f9-73fb-4068-9343-de3e30cbb221)
