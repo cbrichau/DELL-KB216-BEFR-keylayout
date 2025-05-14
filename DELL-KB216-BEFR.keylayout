@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 426 on 2025-05-12 at 15:01 (CEST)-->
-<keyboard group="126" id="-4873" name="DELL-KB216-BEFR" maxout="1">
+<!--Last edited by Ukelele version 426 on 2025-05-14 at 12:47 (CEST)-->
+<keyboard group="126" id="-25514" name="DELL-KB216-BEFR" maxout="1">
     <layouts>
         <layout first="0" last="17" mapSet="ANSI" modifiers="Modifiers"/>
         <layout first="18" last="18" mapSet="JIS" modifiers="Modifiers"/>
@@ -66,10 +66,10 @@
             <key code="27" output=")"/>
             <key code="28" output="!"/>
             <key code="29" output="à"/>
-            <key code="30" action="$"/>
+            <key code="30" output="$"/>
             <key code="31" action="o"/>
             <key code="32" action="u"/>
-            <key code="33" action="Dead Key State Circumflex Accent"/>
+            <key code="33" action="^"/>
             <key code="34" action="i"/>
             <key code="35" output="p"/>
             <key code="36" output="&#x000D;"/>
@@ -85,7 +85,7 @@
             <key code="46" output=","/>
             <key code="47" output=":"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
+            <key code="49" action=" "/>
             <key code="50" output="&#x003C;"/>
             <key code="51" output="&#x0008;"/>
             <key code="53" output="&#x001B;"/>
@@ -191,7 +191,7 @@
             <key code="46" output="?"/>
             <key code="47" output="/"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
+            <key code="49" action=" "/>
             <key code="50" output="&#x003E;"/>
             <key code="51" output="&#x0008;"/>
             <key code="53" output="&#x001B;"/>
@@ -262,7 +262,7 @@
             <key code="11" output=""/>
             <key code="12" output=""/>
             <key code="13" output=""/>
-            <key code="14" output=""/>
+            <key code="14" output="€"/>
             <key code="15" output=""/>
             <key code="16" output=""/>
             <key code="17" output=""/>
@@ -297,7 +297,7 @@
             <key code="46" output=""/>
             <key code="47" output=""/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=""/>
+            <key code="49" action=" "/>
             <key code="50" output="\"/>
             <key code="51" output="&#x0008;"/>
             <key code="53" output="&#x001B;"/>
@@ -403,7 +403,7 @@
             <key code="46" output=","/>
             <key code="47" output=":"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
+            <key code="49" action=" "/>
             <key code="50" output="&#x003C;"/>
             <key code="51" output="&#x0008;"/>
             <key code="53" output="&#x001B;"/>
@@ -506,7 +506,7 @@
             <key code="46" output=","/>
             <key code="47" output=":"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
+            <key code="49" action=" "/>
             <key code="50" output="&#x003C;"/>
             <key code="51" output="&#x0008;"/>
             <key code="53" output="&#x001B;"/>
@@ -611,7 +611,7 @@
             <key code="46" output=""/>
             <key code="47" output=""/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=""/>
+            <key code="49" action=" "/>
             <key code="50" output=""/>
             <key code="51" output="&#x0008;"/>
             <key code="53" output="&#x001B;"/>
@@ -689,9 +689,12 @@
         </keyMap>
     </keyMapSet>
     <actions>
-        <action id="$">
-            <when state="none" output="$"/>
-            <when state="Dead Key State Circumflex Accent" output="$"/>
+        <action id=" ">
+            <when state="none" output=" "/>
+            <when state="Dead Key State Acute Accent" output="´"/>
+            <when state="Dead Key State Circumflex Accent" output="^"/>
+            <when state="Dead Key State Dots Accent" output="¨"/>
+            <when state="Dead Key State Grave Accent" output="`"/>
         </action>
         <action id="A">
             <when state="none" output="A"/>
@@ -699,10 +702,6 @@
             <when state="Dead Key State Circumflex Accent" output="Â"/>
             <when state="Dead Key State Dots Accent" output="Ä"/>
             <when state="Dead Key State Grave Accent" output="À"/>
-        </action>
-        <action id="Dead Key State Circumflex Accent">
-            <when state="none" next="Dead Key State Circumflex Accent"/>
-            <when state="Dead Key State Circumflex Accent" next="1"/>
         </action>
         <action id="E">
             <when state="none" output="E"/>
@@ -740,12 +739,9 @@
             <when state="none" next="Dead Key State Circumflex Accent"/>
             <when state="Dead Key State Circumflex Accent" output="^"/>
         </action>
-        <action id="^ 1">
-            <when state="none" next="Dead Key State Circumflex Accent"/>
-        </action>
         <action id="`">
             <when state="none" next="Dead Key State Grave Accent"/>
-            <when state="Dead Key State Acute Accent" next="Dead Key State Grave Accent"/>
+            <when state="Dead Key State Grave Accent" output="`"/>
         </action>
         <action id="a">
             <when state="none" output="a"/>
@@ -790,15 +786,14 @@
         </action>
         <action id="¨">
             <when state="none" next="Dead Key State Dots Accent"/>
-            <when state="Dead Key State Grave Accent" next="Dead Key State Dots Accent"/>
+            <when state="Dead Key State Dots Accent" output="¨"/>
         </action>
         <action id="´">
             <when state="none" next="Dead Key State Acute Accent"/>
-            <when state="Dead Key State Grave Accent" output="´"/>
+            <when state="Dead Key State Acute Accent" output="´"/>
         </action>
     </actions>
     <terminators>
-        <when state="1" output="^"/>
         <when state="Dead Key State Acute Accent" output="´"/>
         <when state="Dead Key State Circumflex Accent" output="^"/>
         <when state="Dead Key State Dots Accent" output="¨"/>
